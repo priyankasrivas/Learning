@@ -1,0 +1,74 @@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dynamics</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet"
+              href="https://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.15.0/css/mwf-west-european-default.min.css">
+    </environment>
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <link rel="stylesheet"
+              href="https://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.15.0/css/mwf-west-european-default.min.css">
+    </environment>
+
+    @*<style>
+        [class*="col-"]{
+            border:1px solid red;
+        }
+    </style>*@
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row NavyBackground">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="c-heading-2">Drive your digital transformation with Dynamics 365</h2>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <span>Grow, evolve, and transform every part of your business to better meet the changing market and needs of your customers. </span>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-md-3 text-center">
+                        <div class="icon-container"><img class="mscom-image" alt="engage customers icon" src="https://c.s-microsoft.com/en-us/CMSImages/d365_engage.svg?version=4a13309b-7fa7-0ca8-c825-f12be52b1c7a"></div>
+                        <h5 class="c-heading-5 reduceTop">Engage Customer</h5>
+                        <div>Build personalized experiences across all customer touchpoints—from consideration to purchase.</div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="icon-container "><img class="mscom-image" alt="empower employees icon" src="https://c.s-microsoft.com/en-us/CMSImages/d365_empower.svg?version=6e371f18-8c1e-adcb-2a0e-60dbe3a9e229"></div>
+                        <h5 class="c-heading-5 reduceTop">Empower employees</h5>
+                        <div>Give your employees familiar tools and actionable insights so they can do their best work.</div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="icon-container"><img class="mscom-image" alt="operations icon" src="https://c.s-microsoft.com/en-us/CMSImages/d365_optimize.svg?version=3120879c-5cab-9ddc-61fd-1a495f43cdf0"></div>
+                        <h5 class="c-heading-5 reduceTop">Optimize operations</h5>
+                        <div>Anticipate and manage business needs with more intelligent processes and predictive guidance.</div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="icon-container "><img class="mscom-image" alt="transform products icon" src="https://c.s-microsoft.com/en-us/CMSImages/d365_transform.svg?version=5660ad8a-49b6-50a3-868f-179ed9c0432b"></div>
+                        <h5 class="c-heading-5 reduceTop">Transform products</h5>
+                        <div>Innovate new business models, automate processes, and shift from being reactive to proactive.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

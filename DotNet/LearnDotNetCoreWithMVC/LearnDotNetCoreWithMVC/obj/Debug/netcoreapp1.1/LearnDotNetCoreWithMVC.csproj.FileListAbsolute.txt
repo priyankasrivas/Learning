@@ -1,0 +1,9 @@
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\bin\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.deps.json
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\bin\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.runtimeconfig.json
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\bin\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.runtimeconfig.dev.json
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\bin\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.dll
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\bin\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.pdb
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\obj\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.csprojResolveAssemblyReference.cache
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\obj\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.AssemblyInfo.cs
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\obj\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.dll
+D:\Priyanka\Learning\DotNet\LearnDotNetCoreWithMVC\LearnDotNetCoreWithMVC\obj\Debug\netcoreapp1.1\LearnDotNetCoreWithMVC.pdb

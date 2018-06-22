@@ -1,0 +1,117 @@
+﻿@model IEnumerable<EasyHealthCareDataStore.hospital_medibuddy>
+
+@{
+    ViewBag.Title = "InsertHospitalDetails";
+}
+
+<h2>InsertHospitalDetails</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_district)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_pincode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_longitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.avgRating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entityId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.blacklisted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospitalSpeciality.Speciality_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_district)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_pincode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_longitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.avgRating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.entityId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.blacklisted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospitalSpeciality.Speciality_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.hospital_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.hospital_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.hospital_id })
+        </td>
+    </tr>
+}
+
+</table>

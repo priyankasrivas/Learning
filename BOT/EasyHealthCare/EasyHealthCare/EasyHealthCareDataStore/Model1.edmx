@@ -1,0 +1,844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EasyHealthCareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Easyhealthcare.dbo.AssociatedInsuranceCompany' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="AssociatedInsuranceCompany">
+          <Key>
+            <PropertyRef Name="hospital_id" />
+            <PropertyRef Name="insurance_company_id" />
+          </Key>
+          <Property Name="hospital_id" Type="int" Nullable="false" />
+          <Property Name="insurance_company_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="empanelment">
+          <Key>
+            <PropertyRef Name="empanelment_id" />
+          </Key>
+          <Property Name="empanelment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="empanelment_type" Type="varchar(max)" />
+          <Property Name="empanelment_Code" Type="char" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="hosp_emp_emergency_map">
+          <Key>
+            <PropertyRef Name="hosp_emp_emergency_map" />
+          </Key>
+          <Property Name="hosp_emp_emergency_map" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="empanelment_id" Type="int" />
+          <Property Name="hospital_id" Type="int" />
+          <Property Name="emergency_num" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="hospital_manual">
+          <Key>
+            <PropertyRef Name="hospital_id" />
+          </Key>
+          <Property Name="hospital_id" Type="int" Nullable="false" />
+          <Property Name="hospital_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="hospital_address" Type="varchar(max)" />
+          <Property Name="hospital_state" Type="varchar(max)" Nullable="false" />
+          <Property Name="hospital_district" Type="varchar(max)" />
+          <Property Name="hospital_city" Type="varchar(max)" />
+          <Property Name="hospital_pincode" Type="varchar(max)" />
+          <Property Name="hospital_phone" Type="varchar(max)" />
+          <Property Name="hospital_email" Type="varchar(max)" />
+          <Property Name="hospital_latitude" Type="varchar(max)" />
+          <Property Name="hospital_longitude" Type="varchar(max)" />
+          <Property Name="hosp_speciality_id" Type="int" />
+          <Property Name="avgRating" Type="int" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="blacklisted" Type="bit" />
+          <Property Name="location" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="hospital_medibuddy">
+          <Key>
+            <PropertyRef Name="hospital_id" />
+          </Key>
+          <Property Name="hospital_id" Type="int" Nullable="false" />
+          <Property Name="hospital_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="hospital_address" Type="varchar(max)" />
+          <Property Name="hospital_state" Type="varchar(max)" Nullable="false" />
+          <Property Name="hospital_district" Type="varchar(max)" />
+          <Property Name="hospital_city" Type="varchar(max)" />
+          <Property Name="hospital_pincode" Type="varchar(max)" />
+          <Property Name="hospital_phone" Type="varchar(max)" />
+          <Property Name="hospital_email" Type="varchar(max)" />
+          <Property Name="hospital_latitude" Type="varchar(max)" />
+          <Property Name="hospital_longitude" Type="varchar(max)" />
+          <Property Name="hosp_speciality_id" Type="int" />
+          <Property Name="avgRating" Type="int" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="blacklisted" Type="bit" />
+          <Property Name="location" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="hospital_medibuddy_backup">
+          <Key>
+            <PropertyRef Name="hospital_id" />
+          </Key>
+          <Property Name="hospital_id" Type="int" Nullable="false" />
+          <Property Name="hospital_name" Type="varchar(max)" Nullable="false" />
+          <Property Name="hospital_address" Type="varchar(max)" />
+          <Property Name="hospital_state" Type="varchar(max)" Nullable="false" />
+          <Property Name="hospital_district" Type="varchar(max)" />
+          <Property Name="hospital_city" Type="varchar(max)" />
+          <Property Name="hospital_pincode" Type="varchar(max)" />
+          <Property Name="hospital_phone" Type="varchar(max)" />
+          <Property Name="hospital_email" Type="varchar(max)" />
+          <Property Name="hospital_latitude" Type="varchar(max)" />
+          <Property Name="hospital_longitude" Type="varchar(max)" />
+          <Property Name="hosp_speciality_id" Type="int" />
+          <Property Name="avgRating" Type="int" />
+          <Property Name="entityId" Type="int" />
+          <Property Name="blacklisted" Type="bit" />
+          <Property Name="location" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="hospitalSpecialities">
+          <Key>
+            <PropertyRef Name="hosp_speciality_id" />
+          </Key>
+          <Property Name="hosp_speciality_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Speciality_Name" Type="varchar(max)" />
+          <Property Name="Speciality_Description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="InsuranceCompany">
+          <Key>
+            <PropertyRef Name="insurance_company_id" />
+          </Key>
+          <Property Name="insurance_company_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="full_name" Type="varchar(max)" />
+          <Property Name="short_name" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="medical_cost_manual">
+          <Key>
+            <PropertyRef Name="medical_cost_id" />
+          </Key>
+          <Property Name="medical_cost_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hospital_id" Type="int" />
+          <Property Name="medical_service_id" Type="int" />
+          <Property Name="medical_cost" Type="float" />
+        </EntityType>
+        <EntityType Name="medical_cost_medibuddy">
+          <Key>
+            <PropertyRef Name="medical_cost_id" />
+          </Key>
+          <Property Name="medical_cost_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hospital_id" Type="int" />
+          <Property Name="medical_service_id" Type="int" />
+          <Property Name="medical_cost" Type="float" />
+        </EntityType>
+        <EntityType Name="medical_services">
+          <Key>
+            <PropertyRef Name="medical_service_id" />
+          </Key>
+          <Property Name="medical_service_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="medical_service_name" Type="varchar(max)" />
+          <Property Name="medical_service_category" Type="varchar(max)" />
+          <Property Name="medical_service_description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="user_hospital">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="varchar(max)" />
+          <Property Name="userttype" Type="char" MaxLength="4" />
+        </EntityType>
+        <Association Name="FK__Associate__hospi__37A5467C">
+          <End Role="hospital_medibuddy" Type="Self.hospital_medibuddy" Multiplicity="1" />
+          <End Role="AssociatedInsuranceCompany" Type="Self.AssociatedInsuranceCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_medibuddy">
+              <PropertyRef Name="hospital_id" />
+            </Principal>
+            <Dependent Role="AssociatedInsuranceCompany">
+              <PropertyRef Name="hospital_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hosp_emp___empan__5070F446">
+          <End Role="empanelment" Type="Self.empanelment" Multiplicity="0..1" />
+          <End Role="hosp_emp_emergency_map" Type="Self.hosp_emp_emergency_map" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empanelment">
+              <PropertyRef Name="empanelment_id" />
+            </Principal>
+            <Dependent Role="hosp_emp_emergency_map">
+              <PropertyRef Name="empanelment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hosp_emp___hospi__5165187F">
+          <End Role="hospital_medibuddy" Type="Self.hospital_medibuddy" Multiplicity="0..1" />
+          <End Role="hosp_emp_emergency_map" Type="Self.hosp_emp_emergency_map" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_medibuddy">
+              <PropertyRef Name="hospital_id" />
+            </Principal>
+            <Dependent Role="hosp_emp_emergency_map">
+              <PropertyRef Name="hospital_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hospital___hosp___35BCFE0A">
+          <End Role="hospitalSpecialities" Type="Self.hospitalSpecialities" Multiplicity="0..1" />
+          <End Role="hospital_medibuddy" Type="Self.hospital_medibuddy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospitalSpecialities">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Principal>
+            <Dependent Role="hospital_medibuddy">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hospital___hosp___3A81B327">
+          <End Role="hospitalSpecialities" Type="Self.hospitalSpecialities" Multiplicity="0..1" />
+          <End Role="hospital_manual" Type="Self.hospital_manual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospitalSpecialities">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Principal>
+            <Dependent Role="hospital_manual">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hospital___hosp___3D5E1FD2">
+          <End Role="hospitalSpecialities" Type="Self.hospitalSpecialities" Multiplicity="0..1" />
+          <End Role="hospital_medibuddy_backup" Type="Self.hospital_medibuddy_backup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospitalSpecialities">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Principal>
+            <Dependent Role="hospital_medibuddy_backup">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__medical_c__hospi__440B1D61">
+          <End Role="hospital_medibuddy" Type="Self.hospital_medibuddy" Multiplicity="0..1" />
+          <End Role="medical_cost_medibuddy" Type="Self.medical_cost_medibuddy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_medibuddy">
+              <PropertyRef Name="hospital_id" />
+            </Principal>
+            <Dependent Role="medical_cost_medibuddy">
+              <PropertyRef Name="hospital_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__medical_c__hospi__46E78A0C">
+          <End Role="hospital_manual" Type="Self.hospital_manual" Multiplicity="0..1" />
+          <End Role="medical_cost_manual" Type="Self.medical_cost_manual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_manual">
+              <PropertyRef Name="hospital_id" />
+            </Principal>
+            <Dependent Role="medical_cost_manual">
+              <PropertyRef Name="hospital_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__medical_c__medic__44FF419A">
+          <End Role="medical_services" Type="Self.medical_services" Multiplicity="0..1" />
+          <End Role="medical_cost_medibuddy" Type="Self.medical_cost_medibuddy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="medical_services">
+              <PropertyRef Name="medical_service_id" />
+            </Principal>
+            <Dependent Role="medical_cost_medibuddy">
+              <PropertyRef Name="medical_service_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__medical_c__medic__47DBAE45">
+          <End Role="medical_services" Type="Self.medical_services" Multiplicity="0..1" />
+          <End Role="medical_cost_manual" Type="Self.medical_cost_manual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="medical_services">
+              <PropertyRef Name="medical_service_id" />
+            </Principal>
+            <Dependent Role="medical_cost_manual">
+              <PropertyRef Name="medical_service_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EasyHealthCareModelStoreContainer">
+          <EntitySet Name="empanelment" EntityType="Self.empanelment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hosp_emp_emergency_map" EntityType="Self.hosp_emp_emergency_map" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hospital_manual" EntityType="Self.hospital_manual" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hospital_medibuddy" EntityType="Self.hospital_medibuddy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hospital_medibuddy_backup" EntityType="Self.hospital_medibuddy_backup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hospitalSpecialities" EntityType="Self.hospitalSpecialities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InsuranceCompany" EntityType="Self.InsuranceCompany" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="medical_cost_manual" EntityType="Self.medical_cost_manual" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="medical_cost_medibuddy" EntityType="Self.medical_cost_medibuddy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="medical_services" EntityType="Self.medical_services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="user_hospital" EntityType="Self.user_hospital" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AssociatedInsuranceCompany" EntityType="Self.AssociatedInsuranceCompany" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AssociatedInsuranceCompany].[hospital_id] AS [hospital_id], 
+    [AssociatedInsuranceCompany].[insurance_company_id] AS [insurance_company_id]
+    FROM [dbo].[AssociatedInsuranceCompany] AS [AssociatedInsuranceCompany]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Associate__hospi__37A5467C" Association="Self.FK__Associate__hospi__37A5467C">
+            <End Role="hospital_medibuddy" EntitySet="hospital_medibuddy" />
+            <End Role="AssociatedInsuranceCompany" EntitySet="AssociatedInsuranceCompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hosp_emp___empan__5070F446" Association="Self.FK__hosp_emp___empan__5070F446">
+            <End Role="empanelment" EntitySet="empanelment" />
+            <End Role="hosp_emp_emergency_map" EntitySet="hosp_emp_emergency_map" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hosp_emp___hospi__5165187F" Association="Self.FK__hosp_emp___hospi__5165187F">
+            <End Role="hospital_medibuddy" EntitySet="hospital_medibuddy" />
+            <End Role="hosp_emp_emergency_map" EntitySet="hosp_emp_emergency_map" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hospital___hosp___35BCFE0A" Association="Self.FK__hospital___hosp___35BCFE0A">
+            <End Role="hospitalSpecialities" EntitySet="hospitalSpecialities" />
+            <End Role="hospital_medibuddy" EntitySet="hospital_medibuddy" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hospital___hosp___3A81B327" Association="Self.FK__hospital___hosp___3A81B327">
+            <End Role="hospitalSpecialities" EntitySet="hospitalSpecialities" />
+            <End Role="hospital_manual" EntitySet="hospital_manual" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hospital___hosp___3D5E1FD2" Association="Self.FK__hospital___hosp___3D5E1FD2">
+            <End Role="hospitalSpecialities" EntitySet="hospitalSpecialities" />
+            <End Role="hospital_medibuddy_backup" EntitySet="hospital_medibuddy_backup" />
+          </AssociationSet>
+          <AssociationSet Name="FK__medical_c__hospi__440B1D61" Association="Self.FK__medical_c__hospi__440B1D61">
+            <End Role="hospital_medibuddy" EntitySet="hospital_medibuddy" />
+            <End Role="medical_cost_medibuddy" EntitySet="medical_cost_medibuddy" />
+          </AssociationSet>
+          <AssociationSet Name="FK__medical_c__hospi__46E78A0C" Association="Self.FK__medical_c__hospi__46E78A0C">
+            <End Role="hospital_manual" EntitySet="hospital_manual" />
+            <End Role="medical_cost_manual" EntitySet="medical_cost_manual" />
+          </AssociationSet>
+          <AssociationSet Name="FK__medical_c__medic__44FF419A" Association="Self.FK__medical_c__medic__44FF419A">
+            <End Role="medical_services" EntitySet="medical_services" />
+            <End Role="medical_cost_medibuddy" EntitySet="medical_cost_medibuddy" />
+          </AssociationSet>
+          <AssociationSet Name="FK__medical_c__medic__47DBAE45" Association="Self.FK__medical_c__medic__47DBAE45">
+            <End Role="medical_services" EntitySet="medical_services" />
+            <End Role="medical_cost_manual" EntitySet="medical_cost_manual" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EasyHealthCareModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="hospital_manual">
+          <Key>
+            <PropertyRef Name="hospital_id" />
+          </Key>
+          <Property Name="hospital_id" Type="Int32" Nullable="false" />
+          <Property Name="hospital_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hospital_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_state" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hospital_district" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_pincode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_latitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_longitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hosp_speciality_id" Type="Int32" />
+          <Property Name="avgRating" Type="Int32" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="blacklisted" Type="Boolean" />
+          <Property Name="location" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="hospitalSpeciality" Relationship="Self.FK__hospital___hosp___30F848ED" FromRole="hospital_manual" ToRole="hospitalSpecialities" />
+          <NavigationProperty Name="medical_cost_manual" Relationship="Self.FK__medical_c__hospi__33D4B598" FromRole="hospital_manual" ToRole="medical_cost_manual" />
+        </EntityType>
+        <EntityType Name="hospital_medibuddy">
+          <Key>
+            <PropertyRef Name="hospital_id" />
+          </Key>
+          <Property Name="hospital_id" Type="Int32" Nullable="false" />
+          <Property Name="hospital_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hospital_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_state" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hospital_district" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_pincode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_latitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_longitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hosp_speciality_id" Type="Int32" />
+          <Property Name="avgRating" Type="Int32" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="blacklisted" Type="Boolean" />
+          <Property Name="location" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AssociatedInsuranceCompanies" Relationship="Self.FK__Associate__hospi__300424B4" FromRole="hospital_medibuddy" ToRole="AssociatedInsuranceCompany" />
+          <NavigationProperty Name="hospitalSpeciality" Relationship="Self.FK__hospital___hosp___31EC6D26" FromRole="hospital_medibuddy" ToRole="hospitalSpecialities" />
+          <NavigationProperty Name="medical_cost_medibuddy" Relationship="Self.FK__medical_c__hospi__35BCFE0A" FromRole="hospital_medibuddy" ToRole="medical_cost_medibuddy" />
+          <NavigationProperty Name="hosp_emp_emergency_map" Relationship="EasyHealthCareModel.FK__hosp_emp___hospi__5165187F" FromRole="hospital_medibuddy" ToRole="hosp_emp_emergency_map" />
+        </EntityType>
+        <EntityType Name="hospital_medibuddy_backup">
+          <Key>
+            <PropertyRef Name="hospital_id" />
+          </Key>
+          <Property Name="hospital_id" Type="Int32" Nullable="false" />
+          <Property Name="hospital_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hospital_address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_state" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hospital_district" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_city" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_pincode" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_latitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hospital_longitude" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="hosp_speciality_id" Type="Int32" />
+          <Property Name="avgRating" Type="Int32" />
+          <Property Name="entityId" Type="Int32" />
+          <Property Name="blacklisted" Type="Boolean" />
+          <Property Name="location" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="hospitalSpeciality" Relationship="Self.FK__hospital___hosp___32E0915F" FromRole="hospital_medibuddy_backup" ToRole="hospitalSpecialities" />
+        </EntityType>
+        <EntityType Name="hospitalSpeciality">
+          <Key>
+            <PropertyRef Name="hosp_speciality_id" />
+          </Key>
+          <Property Name="hosp_speciality_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Speciality_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Speciality_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="hospital_manual" Relationship="Self.FK__hospital___hosp___30F848ED" FromRole="hospitalSpecialities" ToRole="hospital_manual" />
+          <NavigationProperty Name="hospital_medibuddy" Relationship="Self.FK__hospital___hosp___31EC6D26" FromRole="hospitalSpecialities" ToRole="hospital_medibuddy" />
+          <NavigationProperty Name="hospital_medibuddy_backup" Relationship="Self.FK__hospital___hosp___32E0915F" FromRole="hospitalSpecialities" ToRole="hospital_medibuddy_backup" />
+        </EntityType>
+        <EntityType Name="InsuranceCompany">
+          <Key>
+            <PropertyRef Name="insurance_company_id" />
+          </Key>
+          <Property Name="insurance_company_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="full_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="short_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="medical_services">
+          <Key>
+            <PropertyRef Name="medical_service_id" />
+          </Key>
+          <Property Name="medical_service_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="medical_service_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="medical_service_category" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="medical_service_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="medical_cost_manual" Relationship="Self.FK__medical_c__medic__34C8D9D1" FromRole="medical_services" ToRole="medical_cost_manual" />
+          <NavigationProperty Name="medical_cost_medibuddy" Relationship="Self.FK__medical_c__medic__36B12243" FromRole="medical_services" ToRole="medical_cost_medibuddy" />
+        </EntityType>
+        <EntityType Name="AssociatedInsuranceCompany">
+          <Key>
+            <PropertyRef Name="hospital_id" />
+            <PropertyRef Name="insurance_company_id" />
+          </Key>
+          <Property Name="hospital_id" Type="Int32" Nullable="false" />
+          <Property Name="insurance_company_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="hospital_medibuddy" Relationship="Self.FK__Associate__hospi__300424B4" FromRole="AssociatedInsuranceCompany" ToRole="hospital_medibuddy" />
+        </EntityType>
+        <EntityType Name="medical_cost_manual">
+          <Key>
+            <PropertyRef Name="medical_cost_id" />
+          </Key>
+          <Property Name="medical_cost_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hospital_id" Type="Int32" />
+          <Property Name="medical_service_id" Type="Int32" />
+          <Property Name="medical_cost" Type="Double" />
+          <NavigationProperty Name="hospital_manual" Relationship="Self.FK__medical_c__hospi__33D4B598" FromRole="medical_cost_manual" ToRole="hospital_manual" />
+          <NavigationProperty Name="medical_services" Relationship="Self.FK__medical_c__medic__34C8D9D1" FromRole="medical_cost_manual" ToRole="medical_services" />
+        </EntityType>
+        <EntityType Name="medical_cost_medibuddy">
+          <Key>
+            <PropertyRef Name="medical_cost_id" />
+          </Key>
+          <Property Name="medical_cost_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hospital_id" Type="Int32" />
+          <Property Name="medical_service_id" Type="Int32" />
+          <Property Name="medical_cost" Type="Double" />
+          <NavigationProperty Name="hospital_medibuddy" Relationship="Self.FK__medical_c__hospi__35BCFE0A" FromRole="medical_cost_medibuddy" ToRole="hospital_medibuddy" />
+          <NavigationProperty Name="medical_services" Relationship="Self.FK__medical_c__medic__36B12243" FromRole="medical_cost_medibuddy" ToRole="medical_services" />
+        </EntityType>
+        <Association Name="FK__hospital___hosp___30F848ED">
+          <End Role="hospitalSpecialities" Type="Self.hospitalSpeciality" Multiplicity="0..1" />
+          <End Role="hospital_manual" Type="Self.hospital_manual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospitalSpecialities">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Principal>
+            <Dependent Role="hospital_manual">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__medical_c__hospi__33D4B598">
+          <End Role="hospital_manual" Type="Self.hospital_manual" Multiplicity="0..1" />
+          <End Role="medical_cost_manual" Type="Self.medical_cost_manual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_manual">
+              <PropertyRef Name="hospital_id" />
+            </Principal>
+            <Dependent Role="medical_cost_manual">
+              <PropertyRef Name="hospital_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Associate__hospi__300424B4">
+          <End Role="hospital_medibuddy" Type="Self.hospital_medibuddy" Multiplicity="1" />
+          <End Role="AssociatedInsuranceCompany" Type="Self.AssociatedInsuranceCompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_medibuddy">
+              <PropertyRef Name="hospital_id" />
+            </Principal>
+            <Dependent Role="AssociatedInsuranceCompany">
+              <PropertyRef Name="hospital_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hospital___hosp___31EC6D26">
+          <End Role="hospitalSpecialities" Type="Self.hospitalSpeciality" Multiplicity="0..1" />
+          <End Role="hospital_medibuddy" Type="Self.hospital_medibuddy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospitalSpecialities">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Principal>
+            <Dependent Role="hospital_medibuddy">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__medical_c__hospi__35BCFE0A">
+          <End Role="hospital_medibuddy" Type="Self.hospital_medibuddy" Multiplicity="0..1" />
+          <End Role="medical_cost_medibuddy" Type="Self.medical_cost_medibuddy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_medibuddy">
+              <PropertyRef Name="hospital_id" />
+            </Principal>
+            <Dependent Role="medical_cost_medibuddy">
+              <PropertyRef Name="hospital_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hospital___hosp___32E0915F">
+          <End Role="hospitalSpecialities" Type="Self.hospitalSpeciality" Multiplicity="0..1" />
+          <End Role="hospital_medibuddy_backup" Type="Self.hospital_medibuddy_backup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospitalSpecialities">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Principal>
+            <Dependent Role="hospital_medibuddy_backup">
+              <PropertyRef Name="hosp_speciality_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__medical_c__medic__34C8D9D1">
+          <End Role="medical_services" Type="Self.medical_services" Multiplicity="0..1" />
+          <End Role="medical_cost_manual" Type="Self.medical_cost_manual" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="medical_services">
+              <PropertyRef Name="medical_service_id" />
+            </Principal>
+            <Dependent Role="medical_cost_manual">
+              <PropertyRef Name="medical_service_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__medical_c__medic__36B12243">
+          <End Role="medical_services" Type="Self.medical_services" Multiplicity="0..1" />
+          <End Role="medical_cost_medibuddy" Type="Self.medical_cost_medibuddy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="medical_services">
+              <PropertyRef Name="medical_service_id" />
+            </Principal>
+            <Dependent Role="medical_cost_medibuddy">
+              <PropertyRef Name="medical_service_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EasyHealthCareEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="hospital_manual" EntityType="Self.hospital_manual" />
+          <EntitySet Name="hospital_medibuddy" EntityType="Self.hospital_medibuddy" />
+          <EntitySet Name="hospital_medibuddy_backup" EntityType="Self.hospital_medibuddy_backup" />
+          <EntitySet Name="hospitalSpecialities" EntityType="Self.hospitalSpeciality" />
+          <EntitySet Name="InsuranceCompanies" EntityType="Self.InsuranceCompany" />
+          <EntitySet Name="medical_services" EntityType="Self.medical_services" />
+          <EntitySet Name="AssociatedInsuranceCompanies" EntityType="Self.AssociatedInsuranceCompany" />
+          <EntitySet Name="medical_cost_manual" EntityType="Self.medical_cost_manual" />
+          <EntitySet Name="medical_cost_medibuddy" EntityType="Self.medical_cost_medibuddy" />
+          <AssociationSet Name="FK__hospital___hosp___30F848ED" Association="Self.FK__hospital___hosp___30F848ED">
+            <End Role="hospitalSpecialities" EntitySet="hospitalSpecialities" />
+            <End Role="hospital_manual" EntitySet="hospital_manual" />
+          </AssociationSet>
+          <AssociationSet Name="FK__medical_c__hospi__33D4B598" Association="Self.FK__medical_c__hospi__33D4B598">
+            <End Role="hospital_manual" EntitySet="hospital_manual" />
+            <End Role="medical_cost_manual" EntitySet="medical_cost_manual" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Associate__hospi__300424B4" Association="Self.FK__Associate__hospi__300424B4">
+            <End Role="hospital_medibuddy" EntitySet="hospital_medibuddy" />
+            <End Role="AssociatedInsuranceCompany" EntitySet="AssociatedInsuranceCompanies" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hospital___hosp___31EC6D26" Association="Self.FK__hospital___hosp___31EC6D26">
+            <End Role="hospitalSpecialities" EntitySet="hospitalSpecialities" />
+            <End Role="hospital_medibuddy" EntitySet="hospital_medibuddy" />
+          </AssociationSet>
+          <AssociationSet Name="FK__medical_c__hospi__35BCFE0A" Association="Self.FK__medical_c__hospi__35BCFE0A">
+            <End Role="hospital_medibuddy" EntitySet="hospital_medibuddy" />
+            <End Role="medical_cost_medibuddy" EntitySet="medical_cost_medibuddy" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hospital___hosp___32E0915F" Association="Self.FK__hospital___hosp___32E0915F">
+            <End Role="hospitalSpecialities" EntitySet="hospitalSpecialities" />
+            <End Role="hospital_medibuddy_backup" EntitySet="hospital_medibuddy_backup" />
+          </AssociationSet>
+          <AssociationSet Name="FK__medical_c__medic__34C8D9D1" Association="Self.FK__medical_c__medic__34C8D9D1">
+            <End Role="medical_services" EntitySet="medical_services" />
+            <End Role="medical_cost_manual" EntitySet="medical_cost_manual" />
+          </AssociationSet>
+          <AssociationSet Name="FK__medical_c__medic__36B12243" Association="Self.FK__medical_c__medic__36B12243">
+            <End Role="medical_services" EntitySet="medical_services" />
+            <End Role="medical_cost_medibuddy" EntitySet="medical_cost_medibuddy" />
+          </AssociationSet>
+          <EntitySet Name="empanelments" EntityType="EasyHealthCareModel.empanelment" />
+          <EntitySet Name="hosp_emp_emergency_map" EntityType="EasyHealthCareModel.hosp_emp_emergency_map" />
+          <EntitySet Name="user_hospital" EntityType="EasyHealthCareModel.user_hospital" />
+          <AssociationSet Name="FK__hosp_emp___empan__5070F446" Association="EasyHealthCareModel.FK__hosp_emp___empan__5070F446">
+            <End Role="empanelment" EntitySet="empanelments" />
+            <End Role="hosp_emp_emergency_map" EntitySet="hosp_emp_emergency_map" />
+          </AssociationSet>
+          <AssociationSet Name="FK__hosp_emp___hospi__5165187F" Association="EasyHealthCareModel.FK__hosp_emp___hospi__5165187F">
+            <End Role="hospital_medibuddy" EntitySet="hospital_medibuddy" />
+            <End Role="hosp_emp_emergency_map" EntitySet="hosp_emp_emergency_map" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="empanelment">
+          <Key>
+            <PropertyRef Name="empanelment_id" />
+          </Key>
+          <Property Name="empanelment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="empanelment_type" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="empanelment_Code" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="hosp_emp_emergency_map" Relationship="EasyHealthCareModel.FK__hosp_emp___empan__5070F446" FromRole="empanelment" ToRole="hosp_emp_emergency_map" />
+        </EntityType>
+        <EntityType Name="hosp_emp_emergency_map">
+          <Key>
+            <PropertyRef Name="hosp_emp_emergency_map1" />
+          </Key>
+          <Property Name="hosp_emp_emergency_map1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="empanelment_id" Type="Int32" />
+          <Property Name="hospital_id" Type="Int32" />
+          <Property Name="emergency_num" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="empanelment" Relationship="EasyHealthCareModel.FK__hosp_emp___empan__5070F446" FromRole="hosp_emp_emergency_map" ToRole="empanelment" />
+          <NavigationProperty Name="hospital_medibuddy" Relationship="EasyHealthCareModel.FK__hosp_emp___hospi__5165187F" FromRole="hosp_emp_emergency_map" ToRole="hospital_medibuddy" />
+        </EntityType>
+        <EntityType Name="user_hospital">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="userttype" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__hosp_emp___empan__5070F446">
+          <End Type="EasyHealthCareModel.empanelment" Role="empanelment" Multiplicity="0..1" />
+          <End Type="EasyHealthCareModel.hosp_emp_emergency_map" Role="hosp_emp_emergency_map" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empanelment">
+              <PropertyRef Name="empanelment_id" />
+            </Principal>
+            <Dependent Role="hosp_emp_emergency_map">
+              <PropertyRef Name="empanelment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__hosp_emp___hospi__5165187F">
+          <End Type="EasyHealthCareModel.hospital_medibuddy" Role="hospital_medibuddy" Multiplicity="0..1" />
+          <End Type="EasyHealthCareModel.hosp_emp_emergency_map" Role="hosp_emp_emergency_map" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="hospital_medibuddy">
+              <PropertyRef Name="hospital_id" />
+            </Principal>
+            <Dependent Role="hosp_emp_emergency_map">
+              <PropertyRef Name="hospital_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EasyHealthCareModelStoreContainer" CdmEntityContainer="EasyHealthCareEntities">
+          <EntitySetMapping Name="hospital_manual">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.hospital_manual">
+              <MappingFragment StoreEntitySet="hospital_manual">
+                <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+                <ScalarProperty Name="hospital_name" ColumnName="hospital_name" />
+                <ScalarProperty Name="hospital_address" ColumnName="hospital_address" />
+                <ScalarProperty Name="hospital_state" ColumnName="hospital_state" />
+                <ScalarProperty Name="hospital_district" ColumnName="hospital_district" />
+                <ScalarProperty Name="hospital_city" ColumnName="hospital_city" />
+                <ScalarProperty Name="hospital_pincode" ColumnName="hospital_pincode" />
+                <ScalarProperty Name="hospital_phone" ColumnName="hospital_phone" />
+                <ScalarProperty Name="hospital_email" ColumnName="hospital_email" />
+                <ScalarProperty Name="hospital_latitude" ColumnName="hospital_latitude" />
+                <ScalarProperty Name="hospital_longitude" ColumnName="hospital_longitude" />
+                <ScalarProperty Name="hosp_speciality_id" ColumnName="hosp_speciality_id" />
+                <ScalarProperty Name="avgRating" ColumnName="avgRating" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="blacklisted" ColumnName="blacklisted" />
+                <ScalarProperty Name="location" ColumnName="location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hospital_medibuddy">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.hospital_medibuddy">
+              <MappingFragment StoreEntitySet="hospital_medibuddy">
+                <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+                <ScalarProperty Name="hospital_name" ColumnName="hospital_name" />
+                <ScalarProperty Name="hospital_address" ColumnName="hospital_address" />
+                <ScalarProperty Name="hospital_state" ColumnName="hospital_state" />
+                <ScalarProperty Name="hospital_district" ColumnName="hospital_district" />
+                <ScalarProperty Name="hospital_city" ColumnName="hospital_city" />
+                <ScalarProperty Name="hospital_pincode" ColumnName="hospital_pincode" />
+                <ScalarProperty Name="hospital_phone" ColumnName="hospital_phone" />
+                <ScalarProperty Name="hospital_email" ColumnName="hospital_email" />
+                <ScalarProperty Name="hospital_latitude" ColumnName="hospital_latitude" />
+                <ScalarProperty Name="hospital_longitude" ColumnName="hospital_longitude" />
+                <ScalarProperty Name="hosp_speciality_id" ColumnName="hosp_speciality_id" />
+                <ScalarProperty Name="avgRating" ColumnName="avgRating" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="blacklisted" ColumnName="blacklisted" />
+                <ScalarProperty Name="location" ColumnName="location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hospital_medibuddy_backup">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.hospital_medibuddy_backup">
+              <MappingFragment StoreEntitySet="hospital_medibuddy_backup">
+                <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+                <ScalarProperty Name="hospital_name" ColumnName="hospital_name" />
+                <ScalarProperty Name="hospital_address" ColumnName="hospital_address" />
+                <ScalarProperty Name="hospital_state" ColumnName="hospital_state" />
+                <ScalarProperty Name="hospital_district" ColumnName="hospital_district" />
+                <ScalarProperty Name="hospital_city" ColumnName="hospital_city" />
+                <ScalarProperty Name="hospital_pincode" ColumnName="hospital_pincode" />
+                <ScalarProperty Name="hospital_phone" ColumnName="hospital_phone" />
+                <ScalarProperty Name="hospital_email" ColumnName="hospital_email" />
+                <ScalarProperty Name="hospital_latitude" ColumnName="hospital_latitude" />
+                <ScalarProperty Name="hospital_longitude" ColumnName="hospital_longitude" />
+                <ScalarProperty Name="hosp_speciality_id" ColumnName="hosp_speciality_id" />
+                <ScalarProperty Name="avgRating" ColumnName="avgRating" />
+                <ScalarProperty Name="entityId" ColumnName="entityId" />
+                <ScalarProperty Name="blacklisted" ColumnName="blacklisted" />
+                <ScalarProperty Name="location" ColumnName="location" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hospitalSpecialities">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.hospitalSpeciality">
+              <MappingFragment StoreEntitySet="hospitalSpecialities">
+                <ScalarProperty Name="hosp_speciality_id" ColumnName="hosp_speciality_id" />
+                <ScalarProperty Name="Speciality_Name" ColumnName="Speciality_Name" />
+                <ScalarProperty Name="Speciality_Description" ColumnName="Speciality_Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InsuranceCompanies">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.InsuranceCompany">
+              <MappingFragment StoreEntitySet="InsuranceCompany">
+                <ScalarProperty Name="insurance_company_id" ColumnName="insurance_company_id" />
+                <ScalarProperty Name="full_name" ColumnName="full_name" />
+                <ScalarProperty Name="short_name" ColumnName="short_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="medical_services">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.medical_services">
+              <MappingFragment StoreEntitySet="medical_services">
+                <ScalarProperty Name="medical_service_id" ColumnName="medical_service_id" />
+                <ScalarProperty Name="medical_service_name" ColumnName="medical_service_name" />
+                <ScalarProperty Name="medical_service_category" ColumnName="medical_service_category" />
+                <ScalarProperty Name="medical_service_description" ColumnName="medical_service_description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AssociatedInsuranceCompanies">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.AssociatedInsuranceCompany">
+              <MappingFragment StoreEntitySet="AssociatedInsuranceCompany">
+                <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+                <ScalarProperty Name="insurance_company_id" ColumnName="insurance_company_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="medical_cost_manual">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.medical_cost_manual">
+              <MappingFragment StoreEntitySet="medical_cost_manual">
+                <ScalarProperty Name="medical_cost_id" ColumnName="medical_cost_id" />
+                <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+                <ScalarProperty Name="medical_service_id" ColumnName="medical_service_id" />
+                <ScalarProperty Name="medical_cost" ColumnName="medical_cost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="medical_cost_medibuddy">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.medical_cost_medibuddy">
+              <MappingFragment StoreEntitySet="medical_cost_medibuddy">
+                <ScalarProperty Name="medical_cost_id" ColumnName="medical_cost_id" />
+                <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+                <ScalarProperty Name="medical_service_id" ColumnName="medical_service_id" />
+                <ScalarProperty Name="medical_cost" ColumnName="medical_cost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="empanelments">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.empanelment">
+              <MappingFragment StoreEntitySet="empanelment">
+                <ScalarProperty Name="empanelment_Code" ColumnName="empanelment_Code" />
+                <ScalarProperty Name="empanelment_type" ColumnName="empanelment_type" />
+                <ScalarProperty Name="empanelment_id" ColumnName="empanelment_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hosp_emp_emergency_map">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.hosp_emp_emergency_map">
+              <MappingFragment StoreEntitySet="hosp_emp_emergency_map">
+                <ScalarProperty Name="emergency_num" ColumnName="emergency_num" />
+                <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+                <ScalarProperty Name="empanelment_id" ColumnName="empanelment_id" />
+                <ScalarProperty Name="hosp_emp_emergency_map1" ColumnName="hosp_emp_emergency_map" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_hospital">
+            <EntityTypeMapping TypeName="EasyHealthCareModel.user_hospital">
+              <MappingFragment StoreEntitySet="user_hospital">
+                <ScalarProperty Name="userttype" ColumnName="userttype" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

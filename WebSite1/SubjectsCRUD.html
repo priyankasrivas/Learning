@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <style>
+        .hiddenId
+        {
+            /*display:none;*/
+        }
+
+        .subjectList
+        {
+            border:1px solid black;
+            list-style:none;
+            width:100%;
+        }
+
+            .subjectList li
+            {
+                width:100%;
+
+            }
+            
+            .close {
+            }
+    </style>
+    <script>
+        var itemCount = 1;
+        function AddSubject() {
+           // alert($("#txtsubject").val());
+            var idspan = $("<span></span>").text("listItem" + itemCount).addClass("hiddenId");
+            var deleteBtn = $("<span class='close'><span>").text("\u00D7");
+            var li = $("<li></li>").text($("#txtsubject").val());
+            $(li).append(idspan).append(deleteBtn);
+            $("#SubjectsList").append(li);
+            itemCount++;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Subjects</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>Enter Suject</label>
+                <input type="text" id="txtsubject" name="subject" value="" />
+                <button onclick="AddSubject()" >Add Subject</button>
+
+            </div>
+            <div class="col-md-6">
+                <ul id="SubjectsList" class="subjectList">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

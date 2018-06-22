@@ -1,0 +1,12 @@
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\bin\Release\EasyHealthCareDataStore.dll.config
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\bin\Release\EasyHealthCareDataStore.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\bin\Release\EasyHealthCareDataStore.pdb
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\bin\Release\EntityFramework.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\bin\Release\EntityFramework.SqlServer.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\bin\Release\EntityFramework.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\bin\Release\EntityFramework.SqlServer.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\obj\Release\EasyHealthCareDataStore.csprojResolveAssemblyReference.cache
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\obj\Release\EasyHealthCareDataStore.csproj.CoreCompileInputs.cache
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\obj\Release\EasyHealthCareDataStore.csproj.CopyComplete
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\obj\Release\EasyHealthCareDataStore.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareDataStore\obj\Release\EasyHealthCareDataStore.pdb

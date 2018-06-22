@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EasyHealthCareModelStoreContainer" CdmEntityContainer="EasyHealthCareEntities">
+    <EntitySetMapping Name="hospital_manual">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.hospital_manual">
+        <MappingFragment StoreEntitySet="hospital_manual">
+          <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+          <ScalarProperty Name="hospital_name" ColumnName="hospital_name" />
+          <ScalarProperty Name="hospital_address" ColumnName="hospital_address" />
+          <ScalarProperty Name="hospital_state" ColumnName="hospital_state" />
+          <ScalarProperty Name="hospital_district" ColumnName="hospital_district" />
+          <ScalarProperty Name="hospital_city" ColumnName="hospital_city" />
+          <ScalarProperty Name="hospital_pincode" ColumnName="hospital_pincode" />
+          <ScalarProperty Name="hospital_phone" ColumnName="hospital_phone" />
+          <ScalarProperty Name="hospital_email" ColumnName="hospital_email" />
+          <ScalarProperty Name="hospital_latitude" ColumnName="hospital_latitude" />
+          <ScalarProperty Name="hospital_longitude" ColumnName="hospital_longitude" />
+          <ScalarProperty Name="hosp_speciality_id" ColumnName="hosp_speciality_id" />
+          <ScalarProperty Name="avgRating" ColumnName="avgRating" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="blacklisted" ColumnName="blacklisted" />
+          <ScalarProperty Name="location" ColumnName="location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hospital_medibuddy">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.hospital_medibuddy">
+        <MappingFragment StoreEntitySet="hospital_medibuddy">
+          <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+          <ScalarProperty Name="hospital_name" ColumnName="hospital_name" />
+          <ScalarProperty Name="hospital_address" ColumnName="hospital_address" />
+          <ScalarProperty Name="hospital_state" ColumnName="hospital_state" />
+          <ScalarProperty Name="hospital_district" ColumnName="hospital_district" />
+          <ScalarProperty Name="hospital_city" ColumnName="hospital_city" />
+          <ScalarProperty Name="hospital_pincode" ColumnName="hospital_pincode" />
+          <ScalarProperty Name="hospital_phone" ColumnName="hospital_phone" />
+          <ScalarProperty Name="hospital_email" ColumnName="hospital_email" />
+          <ScalarProperty Name="hospital_latitude" ColumnName="hospital_latitude" />
+          <ScalarProperty Name="hospital_longitude" ColumnName="hospital_longitude" />
+          <ScalarProperty Name="hosp_speciality_id" ColumnName="hosp_speciality_id" />
+          <ScalarProperty Name="avgRating" ColumnName="avgRating" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="blacklisted" ColumnName="blacklisted" />
+          <ScalarProperty Name="location" ColumnName="location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hospital_medibuddy_backup">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.hospital_medibuddy_backup">
+        <MappingFragment StoreEntitySet="hospital_medibuddy_backup">
+          <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+          <ScalarProperty Name="hospital_name" ColumnName="hospital_name" />
+          <ScalarProperty Name="hospital_address" ColumnName="hospital_address" />
+          <ScalarProperty Name="hospital_state" ColumnName="hospital_state" />
+          <ScalarProperty Name="hospital_district" ColumnName="hospital_district" />
+          <ScalarProperty Name="hospital_city" ColumnName="hospital_city" />
+          <ScalarProperty Name="hospital_pincode" ColumnName="hospital_pincode" />
+          <ScalarProperty Name="hospital_phone" ColumnName="hospital_phone" />
+          <ScalarProperty Name="hospital_email" ColumnName="hospital_email" />
+          <ScalarProperty Name="hospital_latitude" ColumnName="hospital_latitude" />
+          <ScalarProperty Name="hospital_longitude" ColumnName="hospital_longitude" />
+          <ScalarProperty Name="hosp_speciality_id" ColumnName="hosp_speciality_id" />
+          <ScalarProperty Name="avgRating" ColumnName="avgRating" />
+          <ScalarProperty Name="entityId" ColumnName="entityId" />
+          <ScalarProperty Name="blacklisted" ColumnName="blacklisted" />
+          <ScalarProperty Name="location" ColumnName="location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hospitalSpecialities">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.hospitalSpeciality">
+        <MappingFragment StoreEntitySet="hospitalSpecialities">
+          <ScalarProperty Name="hosp_speciality_id" ColumnName="hosp_speciality_id" />
+          <ScalarProperty Name="Speciality_Name" ColumnName="Speciality_Name" />
+          <ScalarProperty Name="Speciality_Description" ColumnName="Speciality_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InsuranceCompanies">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.InsuranceCompany">
+        <MappingFragment StoreEntitySet="InsuranceCompany">
+          <ScalarProperty Name="insurance_company_id" ColumnName="insurance_company_id" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="short_name" ColumnName="short_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medical_services">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.medical_services">
+        <MappingFragment StoreEntitySet="medical_services">
+          <ScalarProperty Name="medical_service_id" ColumnName="medical_service_id" />
+          <ScalarProperty Name="medical_service_name" ColumnName="medical_service_name" />
+          <ScalarProperty Name="medical_service_category" ColumnName="medical_service_category" />
+          <ScalarProperty Name="medical_service_description" ColumnName="medical_service_description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssociatedInsuranceCompanies">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.AssociatedInsuranceCompany">
+        <MappingFragment StoreEntitySet="AssociatedInsuranceCompany">
+          <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+          <ScalarProperty Name="insurance_company_id" ColumnName="insurance_company_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medical_cost_manual">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.medical_cost_manual">
+        <MappingFragment StoreEntitySet="medical_cost_manual">
+          <ScalarProperty Name="medical_cost_id" ColumnName="medical_cost_id" />
+          <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+          <ScalarProperty Name="medical_service_id" ColumnName="medical_service_id" />
+          <ScalarProperty Name="medical_cost" ColumnName="medical_cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medical_cost_medibuddy">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.medical_cost_medibuddy">
+        <MappingFragment StoreEntitySet="medical_cost_medibuddy">
+          <ScalarProperty Name="medical_cost_id" ColumnName="medical_cost_id" />
+          <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+          <ScalarProperty Name="medical_service_id" ColumnName="medical_service_id" />
+          <ScalarProperty Name="medical_cost" ColumnName="medical_cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="empanelments">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.empanelment">
+        <MappingFragment StoreEntitySet="empanelment">
+          <ScalarProperty Name="empanelment_Code" ColumnName="empanelment_Code" />
+          <ScalarProperty Name="empanelment_type" ColumnName="empanelment_type" />
+          <ScalarProperty Name="empanelment_id" ColumnName="empanelment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hosp_emp_emergency_map">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.hosp_emp_emergency_map">
+        <MappingFragment StoreEntitySet="hosp_emp_emergency_map">
+          <ScalarProperty Name="emergency_num" ColumnName="emergency_num" />
+          <ScalarProperty Name="hospital_id" ColumnName="hospital_id" />
+          <ScalarProperty Name="empanelment_id" ColumnName="empanelment_id" />
+          <ScalarProperty Name="hosp_emp_emergency_map1" ColumnName="hosp_emp_emergency_map" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_hospital">
+      <EntityTypeMapping TypeName="EasyHealthCareModel.user_hospital">
+        <MappingFragment StoreEntitySet="user_hospital">
+          <ScalarProperty Name="userttype" ColumnName="userttype" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

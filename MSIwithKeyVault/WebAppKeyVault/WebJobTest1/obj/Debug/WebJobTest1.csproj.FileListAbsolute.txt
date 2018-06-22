@@ -1,0 +1,6 @@
+D:\Priyanka\Learning\MSIwithKeyVault\WebAppKeyVault\WebJobTest1\bin\Debug\WebJobTest1.exe.config
+D:\Priyanka\Learning\MSIwithKeyVault\WebAppKeyVault\WebJobTest1\bin\Debug\WebJobTest1.exe
+D:\Priyanka\Learning\MSIwithKeyVault\WebAppKeyVault\WebJobTest1\bin\Debug\WebJobTest1.pdb
+D:\Priyanka\Learning\MSIwithKeyVault\WebAppKeyVault\WebJobTest1\obj\Debug\WebJobTest1.csprojResolveAssemblyReference.cache
+D:\Priyanka\Learning\MSIwithKeyVault\WebAppKeyVault\WebJobTest1\obj\Debug\WebJobTest1.exe
+D:\Priyanka\Learning\MSIwithKeyVault\WebAppKeyVault\WebJobTest1\obj\Debug\WebJobTest1.pdb

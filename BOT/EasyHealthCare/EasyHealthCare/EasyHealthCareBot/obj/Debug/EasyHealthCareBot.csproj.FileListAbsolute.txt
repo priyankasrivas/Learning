@@ -1,0 +1,42 @@
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Bot Application.dll.config
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Bot Application.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Bot Application.pdb
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Autofac.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Chronic.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.Bot.Builder.Autofac.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.Bot.Builder.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.Bot.Connector.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.Rest.ClientRuntime.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.WindowsAzure.Configuration.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Newtonsoft.Json.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\System.Net.Http.Formatting.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\System.Web.Http.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\System.Web.Http.WebHost.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Autofac.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.Bot.Builder.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.Bot.Builder.Autofac.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.Bot.Connector.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Microsoft.WindowsAzure.Configuration.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\Newtonsoft.Json.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\System.Net.Http.Formatting.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\System.Web.Http.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\System.Web.Http.WebHost.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\cs\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\de-dE\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\en\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\es\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\obj\Debug\EasyHealthCareBot.csprojResolveAssemblyReference.cache
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\obj\Debug\EasyHealthCareBot.csproj.CoreCompileInputs.cache
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\obj\Debug\EasyHealthCareBot.csproj.CopyComplete
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\obj\Debug\Bot Application.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\EasyHealthCareBot\obj\Debug\Bot Application.pdb

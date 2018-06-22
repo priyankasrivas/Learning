@@ -1,0 +1,34 @@
+﻿@model EasyHealthCareDataStore.empanelment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>empanelment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.empanelment_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empanelment_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empanelment_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empanelment_Code)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.empanelment_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="EasyHealthCareEntities-Web.config Connection String" description="EasyHealthCareEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=easyhealthcare.database.windows.net;initial catalog=Easyhealthcare;User ID=easyhealthcare;password=Micro@hack;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\Priyanka\\Learning\\BOT\\EasyHealthCare\\EasyHealthCare\\EasyHealthCareWebUI\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EasyHealthCareEntities']/@connectionString" />
+  </parameter>
+</parameters>

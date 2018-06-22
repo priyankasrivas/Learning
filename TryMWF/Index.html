@@ -1,0 +1,364 @@
+﻿<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <title>Homepage - title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Example page structure on Microsoft Web Framework">
+    <meta name="keywords" content="Development Site">
+    <meta name="author" content="Microsoft Corporation">
+    <!-- Meta additions -->
+    <!-- Stylesheet requirements -->
+    <!-- Visit the CDN documentation to learn about versions. -->
+    <link rel="stylesheet"
+          href="https://assets.onestore.ms/cdnfiles/external/mwf/long/v1/v1.15.0/css/mwf-west-european-default.min.css">
+
+    <!-- Stylesheet additions -->
+    <!-- Include as a single optimized css file on CDN. -->
+    <!-- ... -->
+</head>
+<body>
+    <!-- Accessibility requirement -->
+    <a class="m-skip-to-main" href="#mainContent" tabindex="0">Skip to main content</a>
+
+    <!-- Universal header -->
+    <!-- Main page content should be wrapped with semantically meaningful html elements (e.g.: article, main) whenever possible. A div element can be used as long as it also contains a role="main" for Accessibility. -->
+    <main id="mainContent" data-grid="container">
+        <!-- Modules should be stacked with a sibling relationship in order to programmatically adjust their position, margins, and padding. -->
+        <div class="m-hero">
+            <div class="c-carousel f-multi-slide" role="region" aria-label="New Products" data-js-interval="6000">
+                <div class="c-sequence-indicator" role="tablist">
+                    <button role="tab" aria-selected="true" aria-label="Accessory hero" aria-controls="accessory-hero" title="accessory-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="App hero" aria-controls="app-hero" title="app-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="Article hero" aria-controls="article-hero" title="article-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="Device hero" aria-controls="device-hero" title="device-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="Game hero" aria-controls="game-hero" title="game-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="Movie hero" aria-controls="movie-hero" title="movie-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="Music album hero" aria-controls="music-album-hero" title="music-album-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="Music artist hero" aria-controls="music-artist-hero" title="music-artist-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="Software hero" aria-controls="software-hero" title="software-hero"></button>
+                    <button role="tab" aria-selected="false" aria-label="TV-show hero" aria-controls="tv-show-hero" title="tv-show-hero"></button>
+                </div>
+                <button class="c-flipper f-previous" aria-hidden="true" tabindex="-1"></button>
+                <button class="c-flipper f-next" aria-hidden="true" tabindex="-1"></button>
+                <div itemscope itemtype="http://schema.org/ItemList">
+                    <ul>
+                        <li id="accessory-hero" data-f-theme="dark" class="f-active" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-accessory theme-dark" itemscope itemtype="http://schema.org/Product">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <h1 class="c-heading">Accessory hero</h1>
+                                        <p class="c-subheading">Subheading</p>
+                                        <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                            <meta itemprop="priceCurrency" content="USD">
+                                            <span>$</span>
+                                            <span itemprop="price">100</span>
+                                            <link itemprop="availability" href="http://schema.org/InStock">
+                                        </div>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="app-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-app theme-dark" itemscope itemtype="http://schema.org/SoftwareApplication">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <picture>
+                                            <source srcset="https://placehold.it/64x64/E3E3E3" media="(min-width:0)">
+                                            <img src="https://placehold.it/64x64/E3E3E3" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                        </picture>
+                                        <h1 class="c-heading">App hero</h1>
+                                        <p class="c-subheading">Subheading</p>
+                                        <div class="c-rating" data-value="3" data-max="5" itemscope itemtype="https://schema.org/AggregateRating">
+                                            <p class="x-screen-reader">
+                                                Rating:
+                                                <span itemprop="ratingValue">3</span>/
+                                                <span itemprop="bestRating">5</span>
+                                            </p>
+                                            <div></div>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="article-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-article theme-dark" itemscope itemtype="http://schema.org/Article">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <h1 class="c-heading">Article hero</h1>
+                                        <p class="c-paragraph">[description]</p>
+                                        <div class="c-logo">
+                                            <span>[Publisher Name]</span>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="device-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-device theme-dark" itemscope itemtype="http://schema.org/Product">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <h1 class="c-heading">Device hero</h1>
+                                        <p class="c-subheading">Subheading</p>
+                                        <div class="c-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                            <meta itemprop="priceCurrency" content="USD">
+                                            <span>$</span>
+                                            <span itemprop="price">100</span>
+                                            <link itemprop="availability" href="http://schema.org/InStock">
+                                        </div>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="game-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-game theme-dark" itemscope itemtype="http://schema.org/VideoGame">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <h1 class="c-product-title">
+                                            <cite>Game hero</cite>
+                                        </h1>
+                                        <p class="c-product-subtitle">[product-subtitle]</p>
+                                        <div class="c-rating" data-value="3" data-max="5" itemscope itemtype="https://schema.org/AggregateRating">
+                                            <p class="x-screen-reader">
+                                                Rating:
+                                                <span itemprop="ratingValue">3</span>/
+                                                <span itemprop="bestRating">5</span>
+                                            </p>
+                                            <div></div>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="movie-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-movie theme-dark" itemscope itemtype="http://schema.org/Movie">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <p class="c-product-subtitle">[product-subtitle]</p>
+                                        <h1 class="c-product-title">
+                                            <cite>Movie hero</cite>
+                                        </h1>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="music-album-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-music-album theme-dark" itemscope itemtype="http://schema.org/MusicAlbum">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <picture>
+                                            <source srcset="http://placehold.it/120x120/E3E3E3" media="(min-width:0)">
+                                            <img class="c-image" src="http://placehold.it/120x120/E3E3E3" alt="[Album cover]">
+                                        </picture>
+                                        <h1 class="c-product-title">
+                                            <cite>Music-album hero</cite>
+                                        </h1>
+                                        <p class="c-product-subtitle">[product-subtitle]</p>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="music-artist-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-music-artist theme-dark" itemscope itemtype="http://schema.org/Person">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <p class="c-product-subtitle">[product-subtitle]</p>
+                                        <h1 class="c-product-title">
+                                            <cite>Music-artist hero</cite>
+                                        </h1>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="software-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-software theme-dark" itemscope itemtype="http://schema.org/SoftwareApplication">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <h1 class="c-heading">Software hero</h1>
+                                        <p class="c-subheading">Subheading</p>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                        <li id="TV-show-hero" data-f-theme="dark" role="tabpanel">
+                            <section class="m-hero-item f-x-left f-y-top context-tv-show theme-dark" itemscope itemtype="http://schema.org/TVSeries">
+                                <picture>
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1779px)">
+                                    <source srcset="http://placehold.it/1600x600" media="(min-width: 1400px)">
+                                    <source srcset="http://placehold.it/1259x472" media="(min-width: 1084px)">
+                                    <source srcset="http://placehold.it/1083x609" media="(min-width:768px)">
+                                    <source srcset="http://placehold.it/767x431" media="(min-width:540px)">
+                                    <source srcset="http://placehold.it/539x303" media="(min-width:0)">
+                                    <img srcset="http://placehold.it/1259x472" src="http://placehold.it/1259x472" alt="Placeholder with grey background and dimension watermark without any imagery">
+                                </picture>
+                                <div>
+                                    <div>
+                                        <p class="c-product-subtitle">[product-subtitle]</p>
+                                        <h1 class="c-product-title">
+                                            <cite>TV show hero</cite>
+                                        </h1>
+                                        <div>
+                                            <a href="#" class="c-call-to-action c-glyph">
+                                                <span>CALL TO ACTION</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="c-action-trigger c-glyph glyph-global-nav-button f-heavyweight">Action trigger</button>
+        <strong class="c-badge f-small f-highlight">LOREM</strong>
+        <blockquote class="c-blockquote f-lightweight">
+            <p class="c-paragraph">Paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet ligula nec urna dictum tempus. Mauris ac feugiat diam. Aenean eget euismod lacus, nec viverra dolor. Phasellus a lacinia dui, id iaculis ipsum. In vel malesuada odio.</p>
+        </blockquote>
+
+        <hr class="c-divider f-pad-vertical-6x" />
+        <div data-grid="col-12 stack-3" class="m-hyperlink-group-content-placement"> ... </div>
+        <div data-grid="col-12" class="m-product-placement f-device"> ... </div>
+        <div data-grid="col-12" class="m-product-placement f-app"> ... </div>
+    </main>
+
+    <!-- Universal footer -->
+    <!-- JavaScript requirements -->
+    <!-- Include before </body>. Use the script file based on preference (UMD, AMD, CommonJS, Auto, etc.) -->
+    <script async="async"
+            src="https://assets.onestore.ms/cdnfiles/external/mwf/short/v1/latest/scripts/mwf-auto-init-main.var.min.js"></script>
+    <noscript></noscript>
+
+    <!-- JavaScript dependencies -->
+    <!-- ... -->
+    <!-- JavaScript additions -->
+    <!-- ... -->
+</body>
+</html>

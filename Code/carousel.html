@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Image Carousel</title>
+
+<style>
+#carouselContainer
+{
+position:relative;
+max-width:1000px;
+margin:auto;
+
+}
+.carouselSlide
+{
+display:none;
+}
+.numberText
+{
+position:absolute;
+top:8px;
+color:#fff;
+font-size:18px;
+}
+
+.carouselCaptionText
+{
+position:absolute;
+bottom:8px;
+color:#fff;
+font-size:18px;
+width:100%;
+text-align:center;
+}
+
+.prev,.next
+{
+color:#fff;
+padding:16px;
+top:50%;
+position:absolute;
+cursor:pointer;
+margin-top: -22px;
+}
+.next
+{
+right:8px;
+}
+
+.prev:hover,.next:hover
+{
+background-color:rgba(0,0,0,.8);
+}
+.dot
+{
+height:13px;
+width:13px;
+margin:0 2px;
+background-color:#bbb;
+display:inline-block;
+border-radius:50%;
+cursor:pointer;
+}
+
+.dot:hover, .active
+{
+background-color:#717171;
+}
+
+img
+{
+    border-radius:10px;
+}
+</style>
+</head>
+<body>
+<div id="carouselContainer">
+    <div class="carouselSlide">
+        <div class="numberText">1/4</div>
+        <img src="https://www.w3schools.com/howto/img_nature_wide.jpg"/>
+        <div class="carouselCaptionText">Caption Text 1 </div>
+    </div>
+    <div class="carouselSlide">
+        <div class="numberText">2/4</div>
+        <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg"/>
+        <div class="carouselCaptionText">Caption Text 2</div>
+    </div>
+    <div class="carouselSlide">
+        <div class="numberText">3/4</div>
+        <img src="https://www.w3schools.com/howto/img_lights_wide.jpg"/>
+        <div class="carouselCaptionText">Caption Text 3</div>
+    </div>
+    <div class="carouselSlide">
+        <div class="numberText">4/4</div>
+        <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg"/>
+        <div class="carouselCaptionText">Caption Text 4</div>
+    </div>
+    <a class="prev" onclick="ChangeSlide(-1);" >&#10094;</a>
+    <a class="next" onclick="ChangeSlide(1);"  >&#10095;</a>
+</div>
+<br>
+<div style="text-align:center">
+    <span class="dot" onclick="PlayCurrentSlide(1);"></span>
+    <span class="dot" onclick="PlayCurrentSlide(2);"></span>
+    <span class="dot" onclick="PlayCurrentSlide(3);"></span>
+    <span class="dot" onclick="PlayCurrentSlide(4);"></span>
+</div>
+</div>
+<script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+<script>
+
+
+var slideIndex=1;
+PlayCarousel(slideIndex);
+
+function PlayCarousel(n)
+{
+    var slides=$('.carouselSlide');
+    slides.each( function()
+    {
+    this.style.display="none";
+    });  
+    
+    if(n>slides.length){slideIndex =1;}
+    if(n<1){slideIndex=slides.length;}
+    $('.carouselSlide')[slideIndex-1].style.display="block";
+}
+function PlayCurrentSlide(n)
+{
+slideIndex=n;
+PlayCarousel(slideIndex);
+}
+function ChangeSlide(n)
+{
+    slideIndex = slideIndex + n;
+    PlayCarousel(slideIndex);
+}
+
+</script>
+</body>
+</html>

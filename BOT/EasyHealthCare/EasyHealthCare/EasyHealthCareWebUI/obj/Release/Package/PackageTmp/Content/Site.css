@@ -1,0 +1,65 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.list li {
+    display: block;
+    padding: 10px;
+}
+
+   .list  li:before {
+        /*Using a Bootstrap glyphicon as the bullet point*/
+        content: "\e080";
+        font-family: 'Glyphicons Halflings';
+        font-size: 9px;
+        float: left;
+        margin-top: 4px;
+        margin-left: -17px;
+        color: #2a2626;
+        
+    }
+
+.darkBlueColor {
+    color:rgb(0, 106, 158) !important;
+}
+
+/* unvisited link */
+.HeaderLink a:link {
+    color: rgb(0, 106, 158);
+}
+
+/* visited link */
+.HeaderLink a:visited {
+    color: rgb(0, 106, 158);
+}
+
+/* mouse over link */
+.HeaderLink a:hover {
+    color: rgb(0, 106, 158);
+}
+
+/* selected link */
+.HeaderLink a:active {
+    color: rgb(0, 106, 158);
+}

@@ -1,0 +1,16 @@
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\ServiceTest.exe.config
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\ServiceTest.exe
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\ServiceTest.pdb
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\EasyHealthCareService.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\Flurl.Http.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\Flurl.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\Newtonsoft.Json.dll
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\EasyHealthCareService.pdb
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\Flurl.Http.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\Flurl.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\bin\Debug\Newtonsoft.Json.xml
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\obj\Debug\ServiceTest.csprojResolveAssemblyReference.cache
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\obj\Debug\ServiceTest.csproj.CoreCompileInputs.cache
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\obj\Debug\ServiceTest.csproj.CopyComplete
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\obj\Debug\ServiceTest.exe
+D:\Priyanka\Learning\BOT\EasyHealthCare\EasyHealthCare\ServiceTest\obj\Debug\ServiceTest.pdb

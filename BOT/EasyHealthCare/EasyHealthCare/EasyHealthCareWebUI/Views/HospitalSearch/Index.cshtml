@@ -1,0 +1,98 @@
+﻿@model EasyHealthCareWebUI.Models.HospitalSearchViewModel
+
+@{
+    ViewBag.Title = "Search Hospitals";
+}
+
+
+<h2>Search Hospitals</h2>
+
+<div class="container">
+    <h4>Provide state or city and then filter further using search input</h4>
+    <hr />
+    <dl class="dl-horizontal"></dl>
+
+    <div>
+        @using (Html.BeginForm("Index", "HospitalSearch", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.SearchCriteria.hospState, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.SearchCriteria.hospState, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-md-5">
+                @Html.LabelFor(model => model.SearchCriteria.hospCity, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.EditorFor(model => model.SearchCriteria.hospCity, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+            <div class="col-md-1">
+                <br />
+                <input type="submit" value="Search" class="btn btn-primary form-control" />
+            </div>
+
+
+        </div>
+        <br /> <br />
+}
+    </div>
+    <div>
+        @if (Model.SearchResult != null)
+        {
+            <table id="hospitalData" class="table table-striped" width="100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Insurance</th>
+                        <th>Specialities</th>
+                        <th>Rating</th>
+                        <th>Empanelment</th>
+                        <th>Emergency</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var resultItem in Model.SearchResult)
+                    {
+
+                    <tr>
+                        <td width="10%">
+                            @Html.DisplayFor(modelItem => resultItem.name)
+                        </td>
+                        <td width="20%">
+                            @Html.DisplayFor(modelItem => resultItem.address)
+                        </td>
+                        <td width="5%">
+                            @Html.DisplayFor(modelItem => resultItem.phone)
+                        </td>
+                        <td width="20">
+                            @Html.Raw(string.Join(" | ", @resultItem.associatedInsuranceCompanies.Select(s => string.Format("<span>{0}</span>", s.shortName))))
+                        </td>
+                        <td width="20%">
+                            @Html.Raw(string.Join(" | ", @resultItem.hospSpecialities))
+                        </td>
+                        <td width="10%">
+                            @Html.DisplayFor(modelItem => resultItem.avgRating)
+                        </td>
+                        <td width="5%">
+                            @Html.Raw(string.Join(" | ", @resultItem.empanelments))
+                        </td>
+                        <td width="10%">
+                            @Html.Raw(string.Join(" | ", @resultItem.emergencyContactNumber))
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('#hospitalData').DataTable(
+            {
+                "pageLength": 50
+            });
+    });
+</script>

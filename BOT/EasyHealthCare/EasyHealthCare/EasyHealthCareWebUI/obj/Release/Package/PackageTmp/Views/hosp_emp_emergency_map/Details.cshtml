@@ -1,0 +1,42 @@
+﻿@model EasyHealthCareDataStore.hosp_emp_emergency_map
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>hosp_emp_emergency_map</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.emergency_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emergency_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.empanelment.empanelment_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.empanelment.empanelment_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hospital_medibuddy.hospital_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hospital_medibuddy.hospital_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.hosp_emp_emergency_map1 }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

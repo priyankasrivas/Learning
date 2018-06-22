@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EasyHealthCareDataStore.medical_services>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.medical_service_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medical_service_category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.medical_service_description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.medical_service_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medical_service_category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.medical_service_description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.medical_service_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.medical_service_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.medical_service_id })
+        </td>
+    </tr>
+}
+
+</table>

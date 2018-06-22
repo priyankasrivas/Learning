@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c95b592e8b524d69a4170da6c8ed7951" Name="Diagram1" ZoomLevel="96">
+        <EntityTypeShape EntityType="EasyHealthCareModel.hospital_manual" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.hospital_medibuddy" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.hospital_medibuddy_backup" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.hospitalSpeciality" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.InsuranceCompany" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.medical_services" Width="1.5" PointX="3" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.AssociatedInsuranceCompany" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.medical_cost_manual" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.medical_cost_medibuddy" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__hospital___hosp___30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__medical_c__hospi__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__Associate__hospi__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__hospital___hosp___31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__medical_c__hospi__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__hospital___hosp___32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__medical_c__medic__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__medical_c__medic__36B12243" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.empanelment" Width="1.5" PointX="6" PointY="14.25" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.hosp_emp_emergency_map" Width="1.5" PointX="8.25" PointY="8.125" />
+        <EntityTypeShape EntityType="EasyHealthCareModel.user_hospital" Width="1.5" PointX="7.375" PointY="0.75" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__hosp_emp___empan__5070F446" />
+        <AssociationConnector Association="EasyHealthCareModel.FK__hosp_emp___hospi__5165187F" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

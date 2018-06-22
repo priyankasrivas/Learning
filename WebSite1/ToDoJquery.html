@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <style>
+        .toDoContainer {
+            padding: 20px;
+            width: 700px;
+            border: 2px solid black;
+            margin: auto;
+        }
+
+        ol, li {
+            width: 100%;
+            padding:5px;
+        }
+        li{
+            cursor:pointer;
+        }
+
+        input[name='txtTodoItem'] {
+            width: 100%;
+            padding: 10px;
+        }
+
+        ol li:nth-child(odd) {
+            background-color: antiquewhite;
+        }
+        .commands {
+            float: right;
+            
+        }
+
+        
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            var count = 1;
+            var currItem;
+            $("#updateItem").hide();
+            $("#addItem").click(function () {               
+                //$('ol').append('<li id=listItem' + count + '>' + $('input[name=txtTodoItem]').val() + "<button type=button class=edit><span class='glyphicon glyphicon-edit'></span></button><button type=button class=close><span>&times;</span></button></li>");   
+
+                $('ol').append('<li id=listItem' + count + '><span id=listSpan' +count + '>' + $('input[name=txtTodoItem]').val() + "</span><div class=commands><button type=button class=edit><span class='glyphicon glyphicon-edit'></span></button><button type=button class=myclose><span class='glyphicon glyphicon-remove'></span></button></li>");   
+
+                count++;
+                $(".myclose").click(
+                    function () {
+                        $(this).parent().parent().hide();
+                    }
+                );
+                $(".edit").click(
+                    function () {
+                       
+                        var liSelectedId = $(this).parent().parent().attr('id');
+                         currItem = liSelectedId.substring(8, liSelectedId.length);
+                         $('input[name=txtTodoItem]').val($(this).parent().parent().text());
+                        $("#addItem").hide();
+                        $("#updateItem").show();
+
+                    }
+                );
+            });
+
+            $("#updateItem").click(function () {         
+                $('#listSpan' + currItem).text($('input[name=txtTodoItem]').val());
+                $("#addItem").show();
+                $("#updateItem").hide();
+            });
+
+
+            $("#addItem").focus(function () {
+                $(this).val(''    );
+            }
+            );
+
+
+           
+
+           
+
+            });
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="toDoContainer">
+            <form name="myform" >
+                <label>Add to do item</label>
+                <br />
+                <input type="text" name="txtTodoItem" placeholder="Enter To Do" required />
+                <br /><br />
+                <div  id="addItem" class="btn btn-primary"> Add</div>
+                <div id="updateItem" class="btn btn-primary"> Update</div>
+                <div id="toDoListList">
+                    <ol></ol>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

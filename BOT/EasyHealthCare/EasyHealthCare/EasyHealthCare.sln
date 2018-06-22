@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyHealthCareBot", "EasyHealthCareBot\EasyHealthCareBot.csproj", "{B9FD75E9-70A0-4B4D-BA0C-30232C240D74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyHealthCareService", "EasyHealthCareService\EasyHealthCareService.csproj", "{CE3DEC22-54F5-4476-82D9-2AB937A0B676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTest", "ServiceTest\ServiceTest.csproj", "{71F1C46E-783C-4591-8E1A-81558D8B2435}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyHealthCareWebUI", "EasyHealthCareWebUI\EasyHealthCareWebUI.csproj", "{A52B36E5-1E64-48B3-B1F7-E66396E27CEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyHealthCareDataStore", "EasyHealthCareDataStore\EasyHealthCareDataStore.csproj", "{6D174FFC-439A-40B8-B3FE-A672D0A79FB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9FD75E9-70A0-4B4D-BA0C-30232C240D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FD75E9-70A0-4B4D-BA0C-30232C240D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FD75E9-70A0-4B4D-BA0C-30232C240D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FD75E9-70A0-4B4D-BA0C-30232C240D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE3DEC22-54F5-4476-82D9-2AB937A0B676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3DEC22-54F5-4476-82D9-2AB937A0B676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3DEC22-54F5-4476-82D9-2AB937A0B676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE3DEC22-54F5-4476-82D9-2AB937A0B676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F1C46E-783C-4591-8E1A-81558D8B2435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F1C46E-783C-4591-8E1A-81558D8B2435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F1C46E-783C-4591-8E1A-81558D8B2435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F1C46E-783C-4591-8E1A-81558D8B2435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A52B36E5-1E64-48B3-B1F7-E66396E27CEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52B36E5-1E64-48B3-B1F7-E66396E27CEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52B36E5-1E64-48B3-B1F7-E66396E27CEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52B36E5-1E64-48B3-B1F7-E66396E27CEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D174FFC-439A-40B8-B3FE-A672D0A79FB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D174FFC-439A-40B8-B3FE-A672D0A79FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D174FFC-439A-40B8-B3FE-A672D0A79FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D174FFC-439A-40B8-B3FE-A672D0A79FB2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21D0CBF3-9066-404D-8C9C-BDA7B070015C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://priyankasrivas.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EasyHealthCareBot\\EasyHealthCareBot.csproj
+		SccProjectName1 = EasyHealthCareBot
+		SccLocalPath1 = EasyHealthCareBot
+		SccProjectUniqueName2 = EasyHealthCareService\\EasyHealthCareService.csproj
+		SccProjectName2 = EasyHealthCareService
+		SccLocalPath2 = EasyHealthCareService
+		SccProjectUniqueName3 = ServiceTest\\ServiceTest.csproj
+		SccProjectName3 = ServiceTest
+		SccLocalPath3 = ServiceTest
+		SccProjectUniqueName4 = EasyHealthCareWebUI\\EasyHealthCareWebUI.csproj
+		SccProjectName4 = EasyHealthCareWebUI
+		SccLocalPath4 = EasyHealthCareWebUI
+		SccProjectUniqueName5 = EasyHealthCareDataStore\\EasyHealthCareDataStore.csproj
+		SccProjectName5 = EasyHealthCareDataStore
+		SccLocalPath5 = EasyHealthCareDataStore
+	EndGlobalSection
+EndGlobal

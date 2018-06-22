@@ -1,0 +1,6 @@
+D:\Priyanka\Learning\Algo\TestAlgo\TestAlgo\bin\Debug\TestAlgo.exe.config
+D:\Priyanka\Learning\Algo\TestAlgo\TestAlgo\bin\Debug\TestAlgo.exe
+D:\Priyanka\Learning\Algo\TestAlgo\TestAlgo\bin\Debug\TestAlgo.pdb
+D:\Priyanka\Learning\Algo\TestAlgo\TestAlgo\obj\Debug\TestAlgo.csprojResolveAssemblyReference.cache
+D:\Priyanka\Learning\Algo\TestAlgo\TestAlgo\obj\Debug\TestAlgo.exe
+D:\Priyanka\Learning\Algo\TestAlgo\TestAlgo\obj\Debug\TestAlgo.pdb

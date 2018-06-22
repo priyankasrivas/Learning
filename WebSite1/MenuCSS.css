@@ -1,0 +1,64 @@
+﻿#Menu {
+}
+
+    #Menu ul, #Menu ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        #Menu ul li {
+            border-bottom: 1px solid White;
+            background-color: navy;
+            width: 150px;
+            cursor: pointer;
+            
+        }
+
+            #Menu ul li ul li {
+                background-color: lightgreen;
+               
+            }
+
+                #Menu ul li ul li a {
+                    color: navy;
+                }
+
+                #Menu ul li ul li ul li {
+                    background-color: lightyellow;
+                    
+                }
+
+        #Menu ul a {
+            text-decoration: none;
+            color: white;
+            padding :10px 15px;
+        }
+
+        #Menu ul li:hover {
+            background-color: lightblue;
+            position: relative;
+        }
+
+        #Menu ul li ul {
+            display: none;
+            position: absolute;
+        }
+
+        #Menu ul li:hover ul {
+            display: block;
+            left: 150px;
+            top: 0px;
+            background-color: lightblue;
+        }
+
+            #Menu ul li:hover ul li ul {
+                display: none;
+            }
+
+            #Menu ul li:hover ul li:hover ul {
+                display: block;
+                position: absolute;
+                left: 150px;
+                top: 0px;
+            }

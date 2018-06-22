@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EasyHealthCareDataStore.hosp_emp_emergency_map>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.emergency_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empanelment.empanelment_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hospital_medibuddy.hospital_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.emergency_num)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empanelment.empanelment_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hospital_medibuddy.hospital_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.hosp_emp_emergency_map1 }) |
+            @Html.ActionLink("Details", "Details", new { id=item.hosp_emp_emergency_map1 }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.hosp_emp_emergency_map1 })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" style="background-image:url(../../Images/healthcare.jpg)">
+    <h1  class="darkBlueColor">Welcome to Easy Health Care!</h1>
+    
+    <div class="HeaderLink">
+        @*<p class="lead darkBlueColor">Are you a user or Hospital?</p>*@
+        <p> @Html.ActionLink("Click here if you are user", "Index", "HospitalSearch")</p>
+        <p> @Html.ActionLink("Click here if you are associated with hospital", "Index", "medical_cost_medibuddy")</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Why do we exist?</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        @*<p>
+            <b>-> </b>Easy Health Care is one stop solution to find all of your queries related to hospitals present across different regions. We enable each and every person to check the prices, ratings, empanelment, contact number, address, safety score etc of hospitals and their medical services.<br /><br /><br />
+
+        </p>*@
+        <ul>
+            <li class="list">Easy Health Care is one stop solution to find all of your queries related to hospitals present across different regions.</li>
+            <li class="list">We enable you to find hospitals by checking their prices, ratings, empanelment, contact number, address, safety score and their medical services.</li>
+            <li class="list">In need of a medical specialist ? We let you find that very easily. </li>
+        </ul>
+        
+    </div>
+    <div class="col-md-6">
+        <ul>
+            <li class="list">We provide compare services feature where you can compare costs of medical tests across different hospitals in one/multiple cities.</li>
+            <li class="list">We enable you to make informed decision while choosing health care providers.</li>
+            <li class="list">Help you to find hospitals which are covered through your insurance. </li>
+        </ul>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-md-12">
+       <br /> <p><a class="btn btn-primary" href="http://digitalindia.gov.in/">Digital India Website</a></p>
+    </div>
+</div>

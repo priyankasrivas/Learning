@@ -1,0 +1,42 @@
+﻿@model EasyHealthCareDataStore.medical_services
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>medical_services</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.medical_service_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medical_service_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medical_service_category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medical_service_category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.medical_service_description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.medical_service_description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.medical_service_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

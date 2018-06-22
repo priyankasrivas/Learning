@@ -1,0 +1,84 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Modal popup demo</title>
+<style>
+
+.modalPopup
+{
+position:fixed;
+top:0px;
+left:0px;
+background-color:rgba(0,0,0,.4);
+width:100%;
+height:100%;
+display:none;
+}
+
+.modalContet
+{
+width:70%;
+margin: 15% auto;
+background-color:rgba(256,0,0,.3);
+padding:20px;
+animation-name:animateContent;
+animation-duration:0.4s;
+}
+#close
+{
+color:white;
+font-weigt:bold;
+float:right;
+cursor:pointer;
+font-size:28px;
+}
+
+#close:hover,#close:focus
+{
+color:black;
+}
+
+@keyframes animateContent{
+from{width:30px;background-color:rgba(0,256,0,.5)}
+to{width:700px;background-color:rgba(256,0,0,.5)}
+}
+
+
+</style>
+</head>
+<body>
+<div id="modal" class="modalPopup">
+    <div class="modalContet">
+    <span id="close">&times;</span>
+    <p> This is modal popup messgae </p>
+    </div>    
+</div>
+<h1> Top Heading </h1>
+<div>here goes content...
+<button id="openModal">Open Modal Popup </button>
+</div>
+<script>
+var modal= document.getElementById('modal');
+var btn= document.getElementById('openModal');
+var close= document.getElementById('close');
+
+btn.onclick = function (){
+modal.style.display = "block";
+};
+
+close.onclick = function() {
+modal.style.display = "none";
+};
+
+window.onclick = function(event)
+{
+    if(event.target == modal)
+    {    
+       modal.style.display = "none"; 
+    }
+};
+
+</script>
+<body>
+</html>

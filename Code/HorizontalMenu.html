@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Horizotal Menu</title>
+<style>
+#simpleMenu ul, #simpleMenu ul li
+{
+margin:0;
+padding:0;
+list-style:none;
+}
+
+#simpleMenu ul li
+{
+ width:200px;
+ background-color:pink;
+ color:navy;
+ cursor:pointer;
+ display: inline-block;
+}
+
+#simpleMenu ul li a
+{
+text-decoration:none;
+padding:5px 15px;
+color:navy;
+display:inline-block;
+}
+
+#simpleMenu ul li:hover
+{
+position:relative;
+}
+
+#simpleMenu ul li ul
+{
+display:none;
+position:absolute;
+
+}
+
+#simpleMenu ul li:hover ul
+{
+display:block;
+left:0px;
+top:30px;
+}
+
+#simpleMenu ul li:hover ul li ul
+{
+display:none;
+position:absolute;
+}
+
+#simpleMenu ul li:hover ul li:hover ul
+{
+display:block;
+left:200px;
+top:0px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<nav id="simpleMenu">
+<ul>
+    <li><a href="http://bing.com" >Home</a></li>
+    <li>
+    <a href="http://bing.com" >Products</a>
+        <ul>
+                  <li><a href="http://bing.com" >Product 1</a></li>
+                  <li><a href="http://bing.com" >Product 2</a>
+                      <ul>
+                                            <li><a href="http://bing.com" >Sub Product 1</a></li>
+                                            <li><a href="http://bing.com" >Sub Product 2</a></li>
+                                            <li><a href="http://bing.com" >Sub Product 3</a></li>
+                                            <li><a href="http://bing.com" >Sub Product 4</a></li>
+                      </ul>
+                   </li>   
+                  <li><a href="http://bing.com" >Product 3</a></li>
+                  <li><a href="http://bing.com" >Product 4</a></li>
+        </ul>
+     </li>
+    <li><a href="http://bing.com" >About Us</a></li>
+    <li><a href="http://bing.com" >Services</a></li>
+
+</ul>
+</nav>
+</body>
+</html>
